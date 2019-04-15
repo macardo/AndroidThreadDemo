@@ -21,33 +21,32 @@ public class MainActivity extends AppCompatActivity {
                 Executors.defaultThreadFactory().newThread(new Runnable() {
                     @Override
                     public void run() {
-                            //使用Activity对象的runOnUiThread()方法更新UI
-                            MainActivity.this.runOnUiThread(new Runnable() {
+                        //1.使用Activity对象的runOnUiThread()方法更新UI
+                        MainActivity.this.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
                                 button.setText("使用Activity对象的runOnUiThread()方法更新UI");
                             }
                         });
 
-/*                            //使用View对象的post()方法更新UI
-                            button.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    button.setText("使用View对象的post()方法更新UI");
-                                }
-                            });*/
+                        //2.1使用View对象的post()方法更新UI
+                        button.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                button.setText("使用View对象的post()方法更新UI");
+                            }
+                        });
 
-/*                            //使用View对象的postDelayed()方法更新UI
-                            button.postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    button.setText("使用View对象的postDelayed()方法更新UI");
-                                }
-                            },1000);*/
+                        //2.2使用View对象的postDelayed()方法更新UI
+                        button.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                button.setText("使用View对象的postDelayed()方法更新UI");
+                            }
+                        },1000);
                     }
                 }).start();
             }
         });
-
     }
 }

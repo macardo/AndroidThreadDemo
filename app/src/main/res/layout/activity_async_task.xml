@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AsyncTask">
+
+
+    <EditText
+        android:id="@+id/TextView"
+        android:hint="输入数值（s）"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/count"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:id="@+id/count"
+        android:text="计数"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/TextView"
+        android:layout_toEndOf="@+id/TextView"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/show"
+        android:text="开始计数"
+        android:textSize="24dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/count"
+        android:layout_marginTop="20dp"/>
+</RelativeLayout>
